@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('bro4.png');
+        }
+
+        .content-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        img {
+            width: 500px;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        .login-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function show() {
+            
+            var emailValue = document.getElementById("email").value.trim();
+            var numberValue = document.getElementById("number").value.trim();
+            if (emailValue === "" || numberValue === "") {
+                alert("Please fill in all the details to move on.");
+            } else {
+                window.open("file:///D:/Techtitans/show1.html");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content-container">
+        <div class="image-container">
+            <img src="view 13.png" alt="Background Image">
+        </div>
+        <div class="login-box">
+            <div class="form-container">
+                <center>
+                    <img src="view14-modified.png" alt="Background Image">
+                    <h2>SIGN UP</h2>
+                </center>
+                <label for="email">Mail ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your mail ID">
+
+                <label for="number">Mobile Number:</label>
+                <input type="number" id="number" name="number" placeholder="Enter your Mobile Number">
+
+                <button type="button" onclick="show()" >Sign Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

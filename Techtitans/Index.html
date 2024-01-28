@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Live Interview</title>
+    <script src="tinymce_6.8.2/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+        
+<script src="https://cdn.tiny.cloud/1/k8dn10smk4zmb96l3po0kvw3qgt0lsqkqcqtnpd0woo0u8zy/tinymce/6/plugins.min.js" referrerpolicy="origin"></script> 
+        <script>
+            tinymce.init({
+                selector: '#mytextarea',
+                plugins: 'preview powerpaste casechange importcss searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap pagebreak nonbreaking anchor tableofcontents insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker editimage help formatpainter permanentpen pageembed charmap tinycomments mentions quickbars linkchecker emoticons advtable export',
+            });
+        </script>
+    <style>
+        .share-icon {
+            font-size: 21px; 
+            color: #007bff; 
+            cursor: pointer;
+        }
+        h3{
+            margin-bottom: 10px;
+    /* background-color: goldenrod; */
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div id="webcam-container">
+        <div id="wrap-interview">
+            <div id="video-div">
+                <h3 style="color:wheat">Welcome to Live Interview</h3>
+                <video id="webcam" width="600" height="465" autoplay></video>
+            </div>
+            <div id="question-window">
+                <h2>Questions</h2>
+              
+                <div id="question-1">
+                  <p style="color: white;">Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).</p>
+                  <h5 style="color: wheat;">Editor built using TinyMCE</h5>
+        <form method="post">
+            <textarea id="mytextarea">Write your code here!</textarea>
+        </form>
+              
+             
+                </div>
+              
+                </div>
+              
+        </div>
+       
+<script>
+    function endCall(){
+    window.open("http://127.0.0.1:5500/after2.html")
+    }
+    </script>
+        <div id="button-div">
+            <div class="share-icon" onclick="shareScreen()">
+                <i class="fas fa-share-square"></i>
+            </div>
+            <button class="end-call-button" onclick="endCall()">End Call</button>
+            <button class="feedback">submit feedback</button>
+         </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

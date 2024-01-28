@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page3</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-image: url('blue.png');
+        }
+
+        .navbar {
+            background-image:url('im.png');
+            font-family: calibri;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: #18A1DB;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 25px;
+        }
+
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #opinion-box {
+            width: 600px;
+           
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #939393;
+            border-radius: 5px;
+        }
+
+        #submit-btn {
+            padding: 10px;
+            background-color: #f3feff;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text-container {
+            width: 50%;
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            width: 50%;
+            text-align: right;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+        
+
+    </style>
+     <script>
+        function validateForm() {
+            var opinionInput = document.getElementById('opinion').value;
+            var errorMessage = document.getElementById('error-message');
+
+            if (opinionInput.trim() === '') {
+                errorMessage.textContent = 'Please fill in your opinion';
+                return false;
+            } else {
+                errorMessage.textContent = '';
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <div style="width: 20px"></div>
+                <a href="#">Intervyu</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Preparation</a></li>
+                <li><a href="#">Interviews scheduled</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </div>
+    </nav>
+   <center> <div style="max-width: 200px;"> <img src = "view20.png" alt = "google image"></div> <div style="color: #f3feff;"><h2>Google Software Engineering Intern 2023</h2>
+<img src = "robot-modified.png" alt = "robot">
+<h2>Thank you Tina! <br>
+    You have successfully completed your Interview.<br>
+    Lets wait for the Results!<br></h2></center>
+</div>
+ <div class="container">
+    <div class="text-container">
+        <div class="text">
+            <h1 style="color:#b0e3fd">Contact Us
+                <h5 style="color:#d6e6fe94"><p>📧InfoVyu@gmail.com</p></h5>
+                <h5 style="color:#d6e6fe94"><p>in InfoVyu</p></h5>
+                <h5 style="color:#d6e6fe94"><p>youtube..   InfoVyu</p></h5>        
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="bro21.png" alt="Your Image">
+    </div>
+</div>
+<center>© Copyright 2023. All Rights Reserved
+    <hr style="width: 5px; color: #000000;">
+</center>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-image: url('bro4.png');
+        }
+
+        .navbar {
+            background-image:url('im.png');
+            font-family: calibri;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: #18A1DB;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-right: 25px;
+        }
+
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #opinion-box {
+            width: 600px;
+           
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #939393;
+            border-radius: 5px;
+        }
+
+        #submit-btn {
+            padding: 10px;
+            background-color: #6DD3D9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+
+    </style>
+     <script>
+        function validateForm() {
+            var opinionInput = document.getElementById('opinion').value;
+            var errorMessage = document.getElementById('error-message');
+
+            if (opinionInput.trim() === '') {
+                errorMessage.textContent = 'Please fill in your opinion';
+                return false;
+            } else {
+                errorMessage.textContent = '';
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <div style="width: 20px"></div>
+                <a href="#">Intervyu</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Preparation</a></li>
+                <li><a href="#">Interviews scheduled</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </div>
+    </nav>
+   <center> <div style="max-width: 200px;"> <img src = "view20.png" alt = "google image"> </div><h2>Google Software Engineering Intern 2023</h2>
+<img src = "nice1.png" alt="Interview sample">
+<form id="opinion-form" action="another-page.html" method="post" onsubmit="return validateForm()">
+   
+    <div id="opinion-box" action="another-page.html" method="post">
+        <label for="opinion">Type your answer here!</label>
+        <input type="text" id="opinion" name="opinion" style="width: 100%; padding: 5px; margin-bottom: 10px;height: 250px;">
+        <span id="error-message"></span>
+        <button id="submit-btn" type="submit">Submit</button>
+    </div>
+</div>
+<button</center>
+</body>
+</html>

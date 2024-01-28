@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Page1</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        *{text-decoration: none;}
+        nav {
+    background-image: url('im.png');
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+        nav a {
+            float: right; 
+            display: block; 
+            color: rgb(197, 220, 255); 
+            text-align: right; 
+            padding: 12px 16px;
+            text-decoration: none; 
+        }
+        .navbar img {
+            float: left ; 
+            width: 50px; 
+            padding: 8px 8px;
+        }
+        nav a:hover {
+            background-color: #ffffff;
+            color: rgb(2, 4, 96) ;
+        }
+        .navbar{
+            background-image:url('im.png'); font-family: calibri ;padding-right: 8px; padding-right: 8px;
+        }
+        .navdiv{display: flex;align-items: center;justify-content: space-between;}
+        nav img {
+            float: left ; 
+            width: 50px; 
+            padding: 8px 8px;
+        }
+    .logo a{
+        font-size: 35px;font-weight: 600;color: #18A1DB   }
+        
+    li{
+        list-style:none;
+        display: inline-block;
+    }
+    li a{
+        color:white;font-size: 18px; font-weight: bold;margin-right:25px;
+    }
+    .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #DDF7F8;}
+
+        .box {
+            flex: 1;
+            background-image:url('bruh1.png');
+            padding: 20px;
+            box-sizing: border-box; 
+            margin-right: 20px;
+        }
+        .box img {
+            width: 100px; 
+            margin-right: 10px; 
+        }
+       
+        .box h2 {
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            color: #fff6f6;
+        }
+        .button {
+    display: inline-block;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    background-color:#01224d; 
+    color: rgb(255, 247, 247);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+        .container1 {
+            background-color: #a9c0c7; 
+            padding: 20px; 
+        }
+
+        .box1{
+            background-image:url('bruh.png');
+            padding: 15px; 
+            margin-bottom: 20px; 
+        }
+
+        .box1 img {
+            max-width: 100%;
+            display: block; 
+            margin-bottom: 10px; 
+        }
+
+        p {
+            margin-bottom: 10px; }
+        .container2 {
+            display: flex;
+            background-color: #f0f0f0; 
+            padding: 20px; 
+        }
+
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .text-content h2 {
+            color: #333;
+        }
+
+        .image-content img {
+            max-width: 100%; 
+            display: block; 
+        }
+        
+
+        .slider {
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+
+        .slides {
+            width: 500%;
+            height: 500px;
+            display: flex;
+            
+        }
+
+        .slides input {
+            display: none;
+        }
+
+        .slide {
+            width: 20%;
+            transition: 2s;
+        }
+
+        .slide img {
+            width: 500px;
+            height: 500px;
+        }
+
+        .navigation-manual {
+            position: absolute;
+            width: 500px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .manual-btn {
+            border: 2px solid rgb(0, 0, 0);
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .manual-btn:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        .manual-btn:hover {
+            background: black;
+        }
+
+        #radio1:checked~.first {
+            margin-left: 0;
+        }
+
+        #radio2:checked~.second {
+            margin-left: -20%;
+        }
+
+        #radio3:checked~.third {
+            margin-left: -40%;
+        }
+
+        #radio4:checked~.fourth {
+            margin-left: -60%;
+        }
+
+        #radio5:checked~.fifth {
+            margin-left: -80%;
+        }
+
+        .navigation-auto {
+            position: absolute;
+            display: flex;
+            width: 500px;
+            justify-content: center;
+            margin-top: 460px;
+        }
+
+        .navigation-auto div {
+            border: 2px solid rgb(13, 19, 24);
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+        .navigation-auto div:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        #radio1:checked~.navigation-auto .auto-btn1 {
+            background-color: aqua;
+        }
+
+        #radio2:checked~.navigation-auto .auto-btn2 {
+            background-color: aqua;
+        }
+
+        #radio3:checked~.navigation-auto .auto-btn3 {
+            background-color: aqua;
+        }
+
+        #radio4:checked~.navigation-auto .auto-btn4 {
+            background-color: aqua;
+        }
+
+        #radio5:checked~.navigation-auto .auto-btn5 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar"><div class="navdiv"><div class="logo"><img src=""<div style="width: 20px"></div><a href="#">Intervyu</a></div>
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Opportunities </a></li>
+    <li><a href="#">Preparation </a></li>
+    <li><a href="#">Interviews scheduled</a></li>
+    <li><a href="#">Results</a></li>
+</ul></nav>
+<img src="white.png" >
+<div class="container">
+    <div class="box">
+        <center><img src="view3.png" alt="Image 1">
+            <p>Role: Software Developer<br>
+                Experience: 2 years<br>
+                Salary: 80K/month</p>
+                <div class="button"><button class="button">APPLY NOW</button></div></center>
+
+       
+    </div>
+    <div class="box">
+        <center><img src="view4.jpg" alt="Image 1">
+            <p>Role: Software Developer<br>
+                Experience: 2 years<br>
+                Salary: 80K/month</p>
+                <div class="button"><button class="button">APPLY NOW</button></div></center>
+        
+    </div>
+    <div class="box">
+        <center><img src="view6.png" alt="Image 1"> <p>Role: UI/UX Designer<br>
+            Experience: 1 year<br>
+            Salary: 50K/month</p>
+            
+            <div class="button"><button class="button">APPLY NOW</button></div>
+        </center>      
+
+    </div>
+</div><center><h3 style="color: #00000094;"><p>60,000+ companies trust InterVyu’s Live interactive videos with bots
+</p></h3></center>
+<div><div class="Slider">
+    <div class="slides">
+       <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <input type="radio" name="radio-btn" id="radio5">
+        <div class="slide first">
+            <img src="view2.png" alt="first img">
+        </div>
+        <div class="slide second">
+            <img src="view3.png" alt="second img">
+        </div>
+        <div class="slide third">
+            <img src="view4.jpg" alt="third img">
+        </div>
+        <div class="slide fourth">
+            <img src="view5.avif" alt="fourth img">
+        </div>
+        <div class="slide fifth">
+            <img src="view6.png" alt="fifth img">
+        </div>
+    </div>
+    <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+        <div class="auto-btn5"></div>
+    </div>
+
+<div class="navigation-manual">
+    <label for="radio1" class="manual-btn"></label>
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    <label for="radio4" class="manual-btn"></label>
+    <label for="radio5" class="manual-btn"></label>
+</div></div>
+<script type="text/javascript">
+    var counter = 1;
+    setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 5) {
+            counter = 1;
+        }
+    }, 5000);
+</script></div>
+
+<div class="container">
+    <div class="box"style= "background-image= url('bruh1.png')">
+      <center> <img src="view2.png" alt="Image 1">
+        <h2 style="font-weight: 400;">Google Software Engineering
+            Intern 2023</h2>
+        <p>Interview Date: 29 November 2023<br>
+            Interviewer Name: John<br>
+            Interview Time: 5:00 pm to 6:00 pm<br></p>
+        <div class="button"><button class="button">JOIN</button></div>
+        </center> 
+    <img  src="cf8e4090-cb21-4b00-b098-b928a6f53eaf-modified.png" alt="Image 2"><h3 style="font-weight: 700;">Raha</h3>
+        <h4> Recruiter at Google</h4>
+    </div>
+
+    <div class="box">
+        <center><img src="view3.png" alt="Image 3">
+        <h2 style="font-weight: 400;">UI/UX Developer</h2>
+        <p>Interview Date: 5 December 2023<br>
+            Interviewer Name: John<br>
+            Interview Time: 10:00 am to 11:00 am</p>
+            <br> <div class="button"><button class="button">JOIN</button></div>
+        </center>
+            <img src="christina-wocintechchat-com-0Zx1bDv5BNY-unsplash-modified.png" alt="Image 4"><h3 style="font-weight: 700;">Sita</h3>
+        <h4>Recruiter at Zoho</h4>
+    </div>
+</div>
+<div class="container2">
+    <div class="text-content">
+        <center><h1>Contact Us</h1><br>
+            <h5 style="color:#77767694"><p>📧InfoVyu@gmail.com</p></h5>
+            <h5 style="color:#77767694"><p>in InfoVyu</p></h5>
+            <h5 style="color:#77767694"><p>youtube..   InfoVyu</p></h5>        
+        </center>
+    </div>
+
+    <div class="image-content">
+        <img src="bro21.png" alt="Image on the right side">
+    </div>
+    
+
+</div>
+<center> Copyright 2023.All Rights Reserved</center>
+</body>
+</html>

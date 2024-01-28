@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh;
+    margin: 0;
+}
+
+#webcam-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#video-div{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#output-container {
+    margin-top: 20px;
+}
+#wrap-interview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.end-call-button {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    
+}
+
+.end-call-button:hover {
+    background-color: #CC0000;
+}
+
+#button-div{
+    height: 15vh;
+    display: flex;
+    flex-direction:row;
+    align-items: center; 
+    justify-content: center;
+
+}
+
+
+
+#question-window {
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#question-window h2 {
+    margin-bottom: 10px;
+    background-color: goldenrod;
+}
+
+.feedback {
+    background-color: rgb(0, 179, 255);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    
+}
+.feedback:hover {
+    background-color: #4988e6;
+}

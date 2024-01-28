@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('bro4.png');
+        }
+
+        .content-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%; /* Use 100% width to fill the container */
+            height: 100%; /* Use 100% height to fill the container */
+            object-fit: cover;
+        }
+
+        .login-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button, .button2 {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .button2 {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function login() {
+            var usernameValue = document.getElementById("username").value.trim();
+            var passwordValue = document.getElementById("password").value.trim();
+
+            if (usernameValue === "" || passwordValue === "") {
+                alert("Please fill in all the details to login.");
+            } else {
+                sessionStorage.setItem("username", usernameValue);
+                window.open("file:///D:/Techtitans/show2.html");
+            }
+        }
+
+        function goToSignUp() {
+            var confirmSignUp = confirm("Are you sure you want to go to the Sign Up page?");
+            if (confirmSignUp) {
+                window.open("file:///D:/Techtitans/Sign%20up%20page.html");
+            }
+        }
+
+        function stayOnPage() {
+            alert("Great! You chose to stay on the login page.");
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var showPasswordCheckbox = document.getElementById("showPassword");
+
+            if (showPasswordCheckbox.checked) {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="content-container">
+        <div class="image-container">
+            <img src="view 13.png" alt="Background Image">
+        </div>
+        <div class="login-box">
+            <div class="form-container">
+                <center>
+                    <img src="view14-modified.png" alt="Logo Image">
+                    <h2>LOGIN</h2>
+                </center>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your Username">
+                <label for="password">Password:</label>
+                <div style="display: flex; align-items: center;">
+                    <input type="password" id="password" name="password" placeholder="Enter password">
+                    <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                    <label for="showPassword">Show Password</label>
+                </div>
+                <button type="button" onclick="login()" style="margin-top: 10px;">Login</button>
+                <center>Do you want to go to the Sign Up Page instead of Login?</center>
+                <div class="signup-link">
+                    <div class="button-container">
+                        <button class="button2" style="background-color: rgb(36, 19, 166); color: #f8f8f8;" onclick="goToSignUp()">Yes</button>
+                        <button class="button2" style="background-color: rgb(132, 197, 229); color: #f8f8f8;" onclick="stayOnPage()">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
